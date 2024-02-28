@@ -1,0 +1,115 @@
+/* .tbl */
+// @media (min-width: $xs) { /* .tbl $xs */ }
+// @media (min-width: $sm) { /* .tbl $sm */ }
+// @media (min-width: $md) { /* .tbl $md */ }
+@media (min-width: $lg) { /* .tbl $lg */ }
+@media (min-width: $xl) { /* .tbl $xl */ }
+// @media (min-width: $xxl) { /* .tbl $xxl */ }
+
+.tbl {
+  &--product {
+    font-size: 16px;
+    font-weight: 700;
+    
+    td {
+      padding: 0;
+
+      @media (min-width: $lg) {
+        padding: 12px 0 11px 12px;
+        vertical-align: middle;
+      }
+    }
+
+    th {
+      @media (min-width: $lg) {
+        padding-right: 0;
+      }
+    }
+
+    .tbl {
+      &__th--package {
+        padding-left: 0;
+      }
+      &__td--package {
+        @media (min-width: $lg) {
+          padding-left: 0;
+          width: 100%;
+          
+          .tbl__td-inner {
+            flex-direction: column;
+          }
+        }
+        @media (min-width: $xl) {
+          padding-right: 28px;
+          
+          .tbl__td-inner {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+      }
+      &__th--best {
+        text-align: right;
+      }
+      &__td--best {
+        @media (min-width: $lg) {
+          font-size: 18px;
+          color: #9DA6B3;
+          font-family: $ff_second;
+          font-weight: 700;
+          letter-spacing: -1px;
+          text-decoration-line: line-through;
+        }
+      }
+      &__th--price {
+        text-align: right;
+      }
+      &__td--price {
+        font-size: 16px;
+
+        @media (min-width: $xl) {
+          font-family: $ff_second;
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -1px;
+        }
+      }
+      &__per-pill {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-top: 2px;
+      }
+      &__td--add-to-cart {
+
+        .btn {
+          width: 48px;
+          height: 48px;
+          padding: 0;
+          border-radius: 24px;
+          margin-left: auto;
+          
+          @media (min-width: $xl) {
+            width: auto;
+            border-radius: 8px;
+            min-width: 156px;
+          }
+        }
+        .tbl__td-inner {
+          display: block;
+        }
+      }
+      &__td-inner {
+        padding: 10px 10px 11px;
+
+        @media (min-width: $lg) {
+          padding: 0;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

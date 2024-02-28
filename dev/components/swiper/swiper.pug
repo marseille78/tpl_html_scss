@@ -1,0 +1,21 @@
+include ../btn/btn-before-icon
+
+mixin swiper(data)
+  // START .swiper
+  +b.DIV.swiper(data-swiper)
+    .swiper-wrapper
+      each item in dataSwiper.list
+        .swiper-slide
+          .container
+            +e.DIV.slide
+              +e.DIV.body
+                +e.DIV.title= item.text
+                +e.DIV.buy
+                  +btn-before-icon({text: "Buy now", icon: "buy"})
+              if item.img
+                +e.DIV.img
+                  img(src= `img/${item.img}.png` alt="Slide")
+
+    .container
+      +e.DIV.pagination
+  // END .swiper

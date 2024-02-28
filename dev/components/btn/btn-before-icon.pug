@@ -1,0 +1,23 @@
+mixin btn-before-icon(data)
+
+  -
+    const {text, cls, attr, icon, tag, href} = data;
+
+  // START .btn
+  case tag
+    when "a"
+      +b.A.btn(
+        class= cls
+        href= href
+        data-btn=attr ? attr : false
+      )
+        +e.I.icon-before(class= `icon-${icon}`)
+        +e.SPAN.text #{text}
+    default
+      +b.BUTTON.btn(
+        class= cls
+        data-btn=attr ? attr : false
+      )
+        +e.I.icon-before(class= `icon-${icon}`)
+        +e.SPAN.text #{text}
+  // END .btn

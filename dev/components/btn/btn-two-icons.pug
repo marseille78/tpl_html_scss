@@ -1,0 +1,25 @@
+mixin btn-two-icons(data)
+
+  -
+    const {text, cls, attr, icon, icon2, tag, href} = data;
+
+  // START .btn
+  case tag
+    when "a"
+      +b.A.btn(
+        class= cls
+        href= href
+        data-btn=attr ? attr : false
+      )
+        +e.I.icon-before(class= `icon-${icon}`)
+        +e.SPAN.text #{text}
+        +e.I.icon-after(class= `icon-${icon2}`)
+    default
+      +b.BUTTON.btn(
+        class= cls
+        data-btn=attr ? attr : false
+      )
+        +e.I.icon-before(class= `icon-${icon}`)
+        +e.SPAN.text #{text}
+        +e.I.icon-after(class= `icon-${icon2}`)
+  // END .btn

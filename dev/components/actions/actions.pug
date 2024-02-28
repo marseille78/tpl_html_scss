@@ -1,0 +1,25 @@
+mixin actions(data)
+
+  -
+    const {cls} = data;
+
+  // START .actions
+  +b.DIV.actions(class= cls)
+    +e.DIV.body
+      +e.DIV.item
+        +e.DIV.item-view
+          img(src="img/truck.svg" alt="Truck")
+        +e.DIV.item-title Courier Delivery
+        +e.DIV.item-space
+        +e.DIV.item-value 5-9days
+      +e.DIV.item
+        +e.DIV.item-view
+          img(src="img/credit-card.svg" alt="Credit card")
+        +e.DIV.item-title Payment Methods
+        +e.DIV.item-space
+        +e.DIV.item-value
+          img(src="img/payments.png" alt="Payments")
+    +e.DIV.footer
+      i.icon-circle-info
+      span Free Regular Airmail Delivery for orders over $150
+  // END .actions

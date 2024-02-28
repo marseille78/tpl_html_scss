@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include("../base/head.html", {
+  author: false,
+  description: false,
+  title: "Home Page",
+  hasCssLibs: true
+})
+
+<body>
+  @@include("../layout/header/header.html")
+
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+<!-- block content -->
+  <!-- +swiper({}) -->
+<!--  -->
+  <!-- +e.SECTION.section--reasons -->
+    <!-- .container -->
+      <!-- +reasons(dataReasons) -->
+<!--  -->
+  <!-- +e.MAIN.main--index -->
+    <!-- .container -->
+      <!-- +e.H1.title--index Bestseller -->
+<!--  -->
+      <!-- +bestsellers(dataBestsellers) -->
+<!--  -->
+      <!-- +live-support({cls: "d-lg-none"}) -->

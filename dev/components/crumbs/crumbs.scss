@@ -1,0 +1,39 @@
+/* .crumbs */
+// @media (min-width: $xs) { /* .crumbs $xs */ }
+// @media (min-width: $sm) { /* .crumbs $sm */ }
+// @media (min-width: $md) { /* .crumbs $md */ }
+// @media (min-width: $lg) { /* .crumbs $lg */ }
+// @media (min-width: $xl) { /* .crumbs $xl */ }
+// @media (min-width: $xxl) { /* .crumbs $xxl */ }
+
+.crumbs {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  margin-bottom: 24px;
+
+  i {
+    color: #AEB6C5;
+    font-size: 16px;
+    display: block;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__link {
+    color: #1672C6;
+    text-decoration: none;
+    margin-right: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__current {
+    color: #9DA6B3;
+  }
+}

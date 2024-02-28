@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "label": "Home page",
+      "href": "/"
+    },
+    {
+      "label": "About us",
+      "href": "/about.html"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq.html"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/contacts.html"
+    },
+    {
+      "label": "Track order",
+      "href": "/track-order.html"
+    }
+  ]
+}

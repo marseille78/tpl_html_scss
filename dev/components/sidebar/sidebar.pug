@@ -1,0 +1,12 @@
+mixin sidebar(data)
+
+  -
+    const {list} = data;
+
+  // START .sidebar
+  +b.DIV.sidebar
+    +e.UL.list
+      each item in list
+        +e.LI.item
+          +e.A.link(href="!#") #{item.label}
+  // END .sidebar

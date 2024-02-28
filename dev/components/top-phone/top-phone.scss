@@ -1,0 +1,24 @@
+/* .top-phone */
+// @media (min-width: $xs) { /* .top-phone $xs */ }
+// @media (min-width: $sm) { /* .top-phone $sm */ }
+// @media (min-width: $md) { /* .top-phone $md */ }
+@media (min-width: $lg) { /* .top-phone $lg */ }
+// @media (min-width: $xl) { /* .top-phone $xl */ }
+// @media (min-width: $xxl) { /* .top-phone $xxl */ }
+
+.top-phone {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $lg) {
+    height: auto;
+  }
+
+  i {
+    display: block;
+    margin-right: 4px;
+    color: #9DA6B3;
+  }
+}

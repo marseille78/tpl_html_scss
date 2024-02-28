@@ -1,0 +1,18 @@
+extends ../layout/tpl-base
+
+include ../components/crumbs/crumbs
+
+block content
+  .container
+    +crumbs({
+      links: [
+        {href: "/", text: "Home"},
+      ],
+      current: "Shopping cart"
+    })
+
+    +e.MAIN.main--cart
+      +e.H1.page-title Shopping cart
+
+      from
+        +e.SECTION.section

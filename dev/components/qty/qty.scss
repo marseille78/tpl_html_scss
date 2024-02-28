@@ -1,0 +1,55 @@
+/* .qty */
+// @media (min-width: $xs) { /* .qty $xs */ }
+// @media (min-width: $sm) { /* .qty $sm */ }
+// @media (min-width: $md) { /* .qty $md */ }
+@media (min-width: $lg) { /* .qty $lg */ }
+// @media (min-width: $xl) { /* .qty $xl */ }
+// @media (min-width: $xxl) { /* .qty $xxl */ }
+
+.qty {
+  display: flex;
+  align-items: center;
+
+  .tabs__footer-ctrl & {
+    margin-right: 12px;
+
+    @media (min-width: $lg) {
+      margin-right: 20px;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background-color: #EDEEF0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 24px;
+    display: block;
+    align-items: center;
+
+    i {
+      display: block;
+    }
+
+    &--minus {
+      border-radius: 6px 0 0 6px;
+    }
+    &--plus {
+      border-radius: 0 6px 6px 0;
+    }
+  }
+  &__field {
+    width: 42px;
+    height: 40px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #EDEEF0;
+  }
+  &__input {
+    text-align: center;
+    width: 100%;
+    border-width: 0;
+  }
+}

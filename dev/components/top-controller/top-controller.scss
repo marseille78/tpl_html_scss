@@ -1,0 +1,29 @@
+/* .top-controller */
+// @media (min-width: $xs) { /* .top-controller $xs */ }
+// @media (min-width: $sm) { /* .top-controller $sm */ }
+// @media (min-width: $md) { /* .top-controller $md */ }
+@media (min-width: $lg) { /* .top-controller $lg */ }
+// @media (min-width: $xl) { /* .top-controller $xl */ }
+// @media (min-width: $xxl) { /* .top-controller $xxl */ }
+
+.top-controller {
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    width: calc(100% / 3);
+    margin-bottom: 20px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+  &__select {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9DA6B3;
+    border: none;
+    outline: none;
+  }
+}

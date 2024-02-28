@@ -1,0 +1,25 @@
+{
+  "list": [
+    {
+      "text": "Live chat",
+      "cls": "d-none d-lg-block",
+      "icon": "user-circle"
+    },
+    {
+      "text": "Bonus Pills",
+      "icon": "gift-present"
+    },
+    {
+      "text": "Testimonials",
+      "icon": "star"
+    },
+    {
+      "text": "Mobile Application for Android",
+      "icon":"mobile"
+    },
+    {
+      "text": "Free Worldwide Shipping",
+      "icon": "globe"
+    }
+  ]
+}

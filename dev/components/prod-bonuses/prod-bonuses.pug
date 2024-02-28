@@ -1,0 +1,18 @@
+mixin prod-bonuses(data)
+
+  // START .prod-bonuses
+  +b.DIV.prod-bonuses
+    each item in data
+      +e.DIV.item
+        case item
+          when "air"
+            +e.SPAN.tooltip Air
+            +e.I.icon.icon-air
+              span.path1
+              span.path2
+          when "gift"
+            +e.SPAN.tooltip Gift
+            +e.I.icon.icon-gift
+              span.path1
+              span.path2
+  // END .prod-bonuses

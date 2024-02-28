@@ -1,0 +1,16 @@
+mixin reasons(data)
+
+  -
+    const {list} = data;
+
+  // START .reasons
+  +b.DIV.reasons
+    +e.UL.list
+      each item in list
+        +e.LI.item(class= item.cls)
+          +e.A.link(href="!#")
+            +e.SPAN.view
+              img(src= `img/${item.icon}.svg` alt= item.text)
+            |
+            | #{item.text}
+  // END .reasons

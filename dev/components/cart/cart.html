@@ -1,0 +1,49 @@
+<!-- START .cart -->
+<div class="cart">
+  <a href="/cart.html" class="cart__mob-open d-lg-none">
+    <i class="icon-buy"></i>
+    <span>My cart</span>
+  </a>
+  <button class="cart__mob-open d-none d-lg-flex">
+    <i class="icon-buy"></i>
+    <span>My cart</span>
+  </button>
+  <div class="cart__body d-none d-lg-block">
+    <ul class="cart__list">
+      <li class="cart__item">
+        <div class="cart__item-view">
+          <img src="./img/pill-2.jpg" alt="">
+        </div>
+        <div class="cart__item-body">
+          <div class="cart__item-title">Viagra Generic</div>
+          <div class="cart__item-desc">1 x 10 pills</div>
+        </div>
+        <div class="cart__item-summary">
+          <button class="cart__item-remove">&times;</button>
+          <div class="cart__item-price">$33.51</div>
+        </div>
+      </li>
+      <li class="cart__item">
+        <div class="cart__item-view">
+          <img src="./img/pill-2.jpg" alt="">
+        </div>
+        <div class="cart__item-body">
+          <div class="cart__item-title">Viagra Generic</div>
+          <div class="cart__item-desc">1 x 10 pills</div>
+        </div>
+        <div class="cart__item-summary">
+          <button class="cart__item-remove">&times;</button>
+          <div class="cart__item-price">$33.51</div>
+        </div>
+      </li>
+    </ul>
+    <div class="cart__bottom">
+      @@include("../btn/btn.html", {
+        text: "Checkout",
+        attr: "",
+        cls: "",
+      })
+    </div>
+  </div>
+</div>
+<!-- END .cart -->

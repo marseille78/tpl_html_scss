@@ -1,0 +1,148 @@
+// font-family: 'Lato', sans-serif; (400, 700)
+// font-family: 'Open Sans', sans-serif; (400, 700)
+// font-family: 'Raleway', sans-serif; (700)
+// font-family: 'Roboto', sans-serif; (400, 900)
+
+// ***************************************
+// Mixins
+// ***************************************
+@mixin fontFace($font, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font);
+    src: url(#{$path}.woff) format("woff"),
+    url(#{$path}.woff2) format("woff2"),
+    url(#{$path}.ttf) format("ttf");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// Подключение шрифтов
+// @include fontFace('Helvetica', '../fonts/helvetica-regular/helvetica-regular', 400, 'normal');
+// @include fontFace('Helvetica', '../fonts/helvetica-bold/helvetica-bold', 700, 'normal');
+@include fontFace('Helvetica', '../fonts/helvetica/helvetica', 400, 'normal');
+@include fontFace('Helvetica', '../fonts/helvetica-bold/helvetica-bold', 700, 'normal');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?i29xhy');
+  src:  url('../fonts/icomoon/icomoon.eot?i29xhy#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?i29xhy') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?i29xhy') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?i29xhy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-buy-fill:before {
+  content: "\e91d";
+}
+.icon-gift .path1:before {
+  content: "\e919";
+  color: rgb(252, 13, 99);
+}
+.icon-gift .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-air .path1:before {
+  content: "\e91b";
+  color: rgb(22, 114, 198);
+}
+.icon-air .path2:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-right:before {
+  content: "\e900";
+}
+.icon-user-circle:before {
+  content: "\e901";
+}
+.icon-time:before {
+  content: "\e902";
+}
+.icon-tag:before {
+  content: "\e903";
+}
+.icon-star:before {
+  content: "\e904";
+}
+.icon-search:before {
+  content: "\e905";
+}
+.icon-plus:before {
+  content: "\e906";
+}
+.icon-phone:before {
+  content: "\e907";
+}
+.icon-notification:before {
+  content: "\e908";
+}
+.icon-mobile:before {
+  content: "\e909";
+}
+.icon-minus:before {
+  content: "\e90a";
+}
+.icon-message-round:before {
+  content: "\e90b";
+}
+.icon-menu:before {
+  content: "\e90c";
+}
+.icon-heart:before {
+  content: "\e90d";
+}
+.icon-credit-card:before {
+  content: "\e90e";
+}
+.icon-close-x:before {
+  content: "\e90f";
+}
+.icon-circle-info:before {
+  content: "\e910";
+}
+.icon-circle-help:before {
+  content: "\e911";
+}
+.icon-catalog:before {
+  content: "\e912";
+}
+.icon-caret-up:before {
+  content: "\e913";
+}
+.icon-caret-right:before {
+  content: "\e914";
+}
+.icon-caret-left:before {
+  content: "\e915";
+}
+.icon-caret-down:before {
+  content: "\e916";
+}
+.icon-buy:before {
+  content: "\e917";
+}
+.icon-arrow-up:before {
+  content: "\e918";
+}

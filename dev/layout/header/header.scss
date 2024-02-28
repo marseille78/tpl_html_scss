@@ -1,0 +1,144 @@
+/* .header */
+// @media (min-width: $xs) { /* .header $xs */ }
+// @media (min-width: $sm) { /* .header $sm */ }
+// @media (min-width: $md) { /* .header $md */ }
+@media (min-width: $lg) { /* .header $lg */ }
+// @media (min-width: $xl) { /* .header $xl */ }
+// @media (min-width: $xxl) { /* .header $xxl */ }
+
+.header {
+  position: relative;
+  z-index: 5;
+
+  &__top-mob-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+  &__top-mob-line-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 8px 0 0;
+  }
+  &__toggle-menu {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+  }
+  &__btn-menu-close {
+    display: none;
+    
+    .header.opened & {
+      display: block;
+    }
+  }
+  &__btn-menu-open {
+    display: block;
+
+    .header.opened & {
+      display: none;
+    }
+  }
+  &__top-line-inner {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      align-items: center;
+      padding: 11px 0;
+    }
+  }
+  &__menu {
+    order: 3;
+
+    @media (min-width: $lg) {
+      order: 1;
+      margin-right: auto;
+    }
+  }
+  &__top-phone {
+    order: 1;
+
+    @media (min-width: $lg) {
+      order: 2;
+      margin-right: 20px;
+    }
+  }
+  &__top-controller {
+    order: 2;
+
+    @media (min-width: $lg) {
+      order: 3;
+    }
+  }
+  &__top-line {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #EAECF0;
+    transform: translateX(-200%);
+    transition: transform $anim;
+    z-index: 10;
+
+    @media (min-width: $lg) {
+      position: static;
+      transform: none;
+      transition: none;
+    }
+
+    .header.opened & {
+      transform: translateX(0);
+    }
+  }
+  &__body {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+
+    @media (min-width: $lg) {
+      position: static;
+    }
+  }
+  &__body-inner {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $lg) {
+      padding: 31px 0;
+      height: auto;
+    }
+  }
+  &__mob-logo {
+    max-width: 111px;
+  }
+  &__logo {
+    margin-right: 46px;
+  }
+  &__item {
+    &--category {
+      @media (min-width: $lg) {
+        margin-right: 12px;
+      }
+    }
+    &--search {
+      @media (min-width: $lg) {
+        flex-grow: 1;
+        margin-right: 36px;
+      }
+    }
+  }
+}

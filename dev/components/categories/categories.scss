@@ -1,0 +1,119 @@
+/* .categories */
+// @media (min-width: $xs) { /* .categories $xs */ }
+// @media (min-width: $sm) { /* .categories $sm */ }
+// @media (min-width: $md) { /* .categories $md */ }
+@media (min-width: $lg) { /* .categories $lg */ }
+// @media (min-width: $xl) { /* .categories $xl */ }
+// @media (min-width: $xxl) { /* .categories $xxl */ }
+
+.categories {
+  @media (min-width: $lg) {
+    position: relative;
+  }
+
+  &__mob-open {
+    @include btnBottonShow();
+  }
+  &__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    transition: all $anim;
+    transform: translateX(-200%);
+    z-index: 1;
+
+    @media (min-width: $lg) {
+      transform: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .categories.opened & {
+      transform: translateX(0);
+
+      @media (min-width: $lg) {
+        transform: none;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  &__title {
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #242D33;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  &__btn-close {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    color: #8e9ea8;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+    
+    @media (min-width: $lg) {
+      width: 700px;
+      columns: 4;
+      height: auto;
+      max-height: 600px;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 14px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid #f3f4f5;
+
+      @media (min-width: $lg) {
+        border-bottom: none;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    padding: 16px;
+    color: #424c53;
+    text-decoration: none;
+
+    @media (min-width: $lg) {
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    &:hover {
+      background-color: #f3f4f5;
+
+      @media (min-width: $lg) {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+}

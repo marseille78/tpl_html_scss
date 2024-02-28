@@ -1,0 +1,88 @@
+mixin footer(data)
+  // START .footer
+  +b.DIV.footer
+    +e.DIV.body
+      +e.DIV.column
+        +e.DIV.item
+          +e.H3.title Useful Information
+          +e.UL.list
+            +e.LI.list-item
+              +e.A.list-link(href="!#") Contact us
+            +e.LI.list-item
+              +e.A.list-link(href="!#") Sitemap
+            +e.LI.list-item
+              +e.A.list-link(href="!#") Bonuses
+            +e.LI.list-item
+              +e.A.list-link(href="!#") Track order
+            +e.LI.list-item
+              +e.A.list-link(href="!#") Shopping cart
+      +e.DIV.column
+        +e.DIV.item
+          +e.H3.title Contact us
+          +e.UL.list
+            +e.LI.list-item--phones
+              span Toll Free (US):
+              img(src="img/footer-tel-toll-free.png" alt="Toll Free")
+            +e.LI.list-item--phones
+              span UK:
+              img(src="img/footer-tel-uk.png" alt="UK")
+            +e.LI.list-item--phones
+              span Phone US:
+              img(src="img/footer-tel-phone-us.png" alt="Phone US")
+
+        +e.DIV.item
+          +e.H3.title Follow us
+          img(src="img/social.png", alt="Social networks")
+      +e.DIV.column
+        +e.DIV.item
+          +e.H3.title Shipping methods
+          +e.UL.icons
+            +e.LI.icons-item
+              img(src="img/shipping-1.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-2.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-3.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-4.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-5.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-6.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-7.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-8.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-9.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-10.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-11.png" alt="Shipping method")
+            +e.LI.icons-item
+              img(src="img/shipping-12.png" alt="Shipping method")
+        +e.DIV.item
+          +e.H3.title Payment options
+          +e.UL.icons
+            +e.LI.icons-item
+              img(src="img/payment-mastercard.png" alt="Mastercard")
+            +e.LI.icons-item
+              img(src="img/payment-visa.png" alt="Visa")
+            +e.LI.icons-item
+              img(src="img/payment-bitcoin.png" alt="Bitcoin")
+            +e.LI.icons-item
+              img(src="img/payment-tether-usdt.png" alt="Tether usdt")
+            +e.LI.icons-item
+              img(src="img/payment-credit-card.png" alt="Credit card")
+
+    +e.DIV.bottom
+      +e.A.logo(href="/")
+        img(src="img/footer-logo.png", alt="Logo")
+      +e.DIV.copyright
+        p
+          | Copyright &copy;
+          |
+          a(href="www.pharma.com") www.pharma.com
+          |
+          | is an affiliate marketing website. All rights reserved.
+  // END .footer

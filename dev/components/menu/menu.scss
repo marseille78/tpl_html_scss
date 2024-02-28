@@ -1,0 +1,45 @@
+/* .menu */
+// @media (min-width: $xs) { /* .menu $xs */ }
+// @media (min-width: $sm) { /* .menu $sm */ }
+// @media (min-width: $md) { /* .menu $md */ }
+@media (min-width: $lg) { /* .menu $lg */ }
+// @media (min-width: $xl) { /* .menu $xl */ }
+// @media (min-width: $xxl) { /* .menu $xxl */ }
+
+.menu {
+  margin-left: -10px;
+  margin-right: -10px;
+  font-family: $ff_second;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__link {
+    display: block;
+    height: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #9DA6B3;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+
+    @media (min-width: $lg) {
+      height: auto;
+    }
+
+    &:hover {
+      background-color: #F3F4F5;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mixin qty-prod-2(data)
+  // START .qty
+  +b.DIV.qty(data-product-qty-2)
+    +e.BUTTON.btn--minus(type="button" data-qty-decrement)
+      i.icon-minus
+    +e.DIV.field
+      +e.INPUT.input(value=0 data-qty-value)
+    +e.BUTTON.btn--plus(type="button" data-qty-increment)
+      i.icon-plus
+  // END .qty

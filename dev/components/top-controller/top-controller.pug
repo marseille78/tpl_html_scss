@@ -1,0 +1,19 @@
+mixin top-controller(data)
+  // START .top-controller
+  +b.DIV.top-controller
+    +e.DIV.item
+      form
+        +e.SELECT.select
+          each countryItem in dataCountries.list
+            option(value= countryItem.value)= countryItem.label
+    +e.DIV.item
+      form
+        +e.SELECT.select
+          each languageItem in dataLanguages.list
+            option(value= languageItem.value)= languageItem.label
+    +e.DIV.item
+      form
+        +e.SELECT.select
+          each currencyItem in dataCurrency.list
+            option(value= currencyItem.value)= currencyItem.label
+  // END .top-controller

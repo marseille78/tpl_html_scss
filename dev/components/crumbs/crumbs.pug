@@ -1,0 +1,14 @@
+mixin crumbs(data)
+
+  -
+    const {links, current} = data;
+
+  // START .crumbs
+  +b.DIV.crumbs
+    for item in links
+      +e.A.link(href= item.href)= item.text
+      |
+      i.icon-arrow-right
+    
+    +e.SPAN.current= current
+  // END .crumbs

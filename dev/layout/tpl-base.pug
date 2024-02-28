@@ -1,0 +1,20 @@
+
+doctype html
+html(lang="ru")
+
+  block head
+    head
+      +head(dataHead)
+
+  +b.BODY.page
+    +header({})
+    block content
+
+    +e.footer
+      .container
+        +footer({})
+
+    block scripts
+      //- Including, if we have other JS-labs
+      script(src="js/libs.min.js")
+      script(src="js/main.js")

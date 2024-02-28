@@ -1,0 +1,21 @@
+extends ../layout/tpl-base
+
+include ../components/swiper/swiper
+include ../components/reasons/reasons
+include ../components/bestsellers/bestsellers
+include ../components/live-support/live-support
+
+block content
+  +swiper({})
+
+  +e.SECTION.section--reasons
+    .container
+      +reasons(dataReasons)
+
+  +e.MAIN.main--index
+    .container
+      +e.H1.title--index Bestseller
+
+      +bestsellers(dataBestsellers)
+
+      +live-support({cls: "d-lg-none"})

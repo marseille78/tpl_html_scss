@@ -1,0 +1,16 @@
+mixin live-support(data)
+
+  -
+    const {cls} = data;
+
+  // START .live-support
+  +b.A.live-support(href="!#" class= cls)
+    +e.DIV.view
+      +e.DIV.view-inner
+      +e.SPAN.online
+    +e.DIV.body
+      +e.DIV.title Live support
+      +e.DIV.desc 24/7/365
+    +e.DIV.icon
+      i.icon-caret-right
+  // END .live-support

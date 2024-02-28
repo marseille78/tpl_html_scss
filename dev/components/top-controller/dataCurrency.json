@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "label": "USD",
+      "value": "usd"
+    },
+    {
+      "label": "CAD",
+      "value": "cad"
+    },
+    {
+      "label": "EURO",
+      "value": "euro"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "label": "USA",
+      "value": "us"
+    },
+    {
+      "label": "Canada",
+      "value": "ca"
+    },
+    {
+      "label": "France",
+      "value": "fr"
+    },
+    {
+      "label": "United Kingdom",
+      "value": "uk"
+    },
+    {
+      "label": "Spain",
+      "value": "es"
+    },
+    {
+      "label": "Italy",
+      "value": "it"
+    },
+    {
+      "label": "Germany",
+      "value": "de"
+    }
+  ]
+}

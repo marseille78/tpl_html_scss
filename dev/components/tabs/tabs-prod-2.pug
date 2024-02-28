@@ -1,0 +1,47 @@
+include ../prod-bonuses/prod-bonuses
+include ../qty/qty-prod-2
+include ../btn/btn-before-icon
+
+mixin tabs-prod-2(data)
+
+  -
+    const {ctrl, cls} = data;
+
+  // START .tabs
+  +b.DIV.tabs(class= cls data-tabs)
+    +e.UL.ctrl
+      each itemCtrl in ctrl
+        +e.LI.ctrl-item(data-tabs-ctrl)
+          span #{itemCtrl.value}
+          | mg
+
+    +e.DIV.body--prod-2
+      each item in ctrl
+        +e.DIV.body-item(data-tabs-item)
+          +tabs-prod-2-body(item.data.rows)
+
+    +e.DIV.footer
+      +e.DIV.footer-result
+        +e.SPAN.footer-total $
+          span(data-product-price) 0
+        +e.SPAN.footer-discont $
+          span(data-product-best) 0
+      +e.DIV.footer-ctrl
+        +qty-prod-2({})
+        +btn-before-icon({text: "Add to cart", icon: "buy", tag: "a", href: "/"})
+  // END .tabs
+
+mixin tabs-prod-2-body(data)
+  +b.DIV.product-dosage
+    +e.UL.list(data-product-dosage-list)
+      each item in data
+        -
+          const {package, price, best, bonuses, cls} = item;
+
+        +e.LI.item(class= cls data-prod-price= price data-prod-best= best)
+          +e.DIV.body
+            +e.SPAN.title Viagra Generic
+            +e.SPAN.dosage #{package}
+          if bonuses
+            +prod-bonuses(bonuses)
+          +e.I.caret.icon-caret-down

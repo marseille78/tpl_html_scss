@@ -1,0 +1,110 @@
+/* .product-data */
+// @media (min-width: $xs) { /* .product-data $xs */ }
+// @media (min-width: $sm) { /* .product-data $sm */ }
+// @media (min-width: $md) { /* .product-data $md */ }
+@media (min-width: $lg) { /* .product-data $lg */ }
+// @media (min-width: $xl) { /* .product-data $xl */ }
+// @media (min-width: $xxl) { /* .product-data $xxl */ }
+
+.product-data {
+  @media (min-width: $lg) {
+    display: flex;
+  }
+
+  &__title {
+    margin: 0 0 6px;
+    font-size: 26px;
+
+    @media (min-width: $lg) {
+      font-size: 43px;
+      letter-spacing: -1.5px;
+      margin-bottom: 3px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: $ff_second;
+    color: #5C6471;
+    letter-spacing: -1px;
+    margin-bottom: 33px;
+    
+    @media (min-width: $lg) {
+      margin-bottom: 25px;
+    }
+  }
+  &__details {
+    margin-bottom: 42px;
+    
+    @media (min-width: $lg) {
+      width: 100%;
+      min-width: 320px;
+      margin-right: 50px;
+      margin-bottom: 38px;
+    }
+  }
+  &__view {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    @media (min-width: $lg) {
+      padding: 36px 5px 0px;
+    }
+  }
+  &__blister {
+    max-width: 165px;
+    margin-right: 12px;
+  }
+  &__pill {
+    max-width: 80px;
+  }
+  &__details-item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  &__details-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $ff_second;
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  &__details-list {
+    margin: 0;
+    color: #9DA6B3;
+    font-size: 14px;
+    line-height: 20px;
+
+    a {
+      text-decoration: none;
+      color: #1672C6;
+      margin: 0 4px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      color: #202225;
+      margin: 0 4px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__desc {
+    @media (min-width: $lg) {
+      margin-bottom: 32px;
+    }
+
+    &--second {
+      margin-bottom: 31px;
+    }
+  }
+}

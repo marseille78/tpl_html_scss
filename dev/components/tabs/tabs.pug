@@ -1,0 +1,21 @@
+include ../tbl/tbl-product
+
+mixin tabs(data)
+
+  -
+    const {cmp, ctrl, cls} = data;
+
+  // START .tabs
+  +b.DIV.tabs(class= cls data-tabs)
+    +e.UL.ctrl
+      each itemCtrl in ctrl
+        +e.LI.ctrl-item(data-tabs-ctrl)
+          span #{itemCtrl.value}
+          | mg
+
+    +e.DIV.body
+      if cmp === "tbl-product"
+        each item in ctrl
+          +e.DIV.body-item(data-tabs-item)
+            +tbl-product(item.data)
+  // END .tabs

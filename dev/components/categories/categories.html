@@ -1,0 +1,27 @@
+<!-- START .categories -->
+<div class="categories" data-category-block>
+  <button class="categories__mob-open d-lg-none" data-btn="toggle-show-categories">
+    <i class="icon-catalog"></i>
+    <span>Catalog</span>
+  </button>
+
+  @@include("../btn/btn-before-icon.html", {
+    text: "Categories",
+    icon: "menu",
+    cls: "d-none d-lg-flex",
+    attr: "toggle-show-categories"
+  })
+
+  <div class="categories__body">
+    <div class="categories__title d-lg-none">
+      <span>Categories</span>
+      <button class="categories__btn-close" type="button" data-btn="toggle-show-categories">
+        <i class="icon-close-x"></i>
+      </button>
+    </div>
+    <ul class="categories__list">
+      @@loop("./_item.html", "./dataCategory.json")
+    </ul>
+  </div>
+</div>
+<!-- END .categories -->

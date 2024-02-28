@@ -1,0 +1,9 @@
+include ../product-card/product-card
+
+mixin bestsellers(data)
+  // START .bestsellers
+  +b.DIV.bestsellers
+    each item in dataBestsellers.list
+      +e.DIV.item
+        +product-card(item)
+  // END .bestsellers

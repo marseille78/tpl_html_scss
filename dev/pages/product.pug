@@ -1,0 +1,30 @@
+extends ../layout/tpl-base
+
+include ../components/crumbs/crumbs
+include ../components/product-data/product-data
+include ../components/product-desc/product-desc
+include ../components/live-support/live-support
+include ../components/sidebar/sidebar
+
+block content
+  .container
+    +crumbs({
+      links: [
+        {href: "/", text: "Home"},
+        {href: "/", text: "Category"},
+      ],
+      current: "Generik Viagra"
+    })
+
+    +e.MAIN.main--product
+      +e.SECTION.block
+        +product-data({})
+
+      +e.SECTION.content
+        +e.ASIDE.sidebar.page__block.d-none.d-lg-block
+          +sidebar(dataCategory)
+
+        +e.SECTION.block--content
+          +product-desc({})
+
+      +live-support({cls: "d-lg-none"})

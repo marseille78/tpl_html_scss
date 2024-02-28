@@ -1,0 +1,18 @@
+include ../btn/btn-before-icon
+
+mixin product-card(data)
+
+  -
+    const {img} = data;
+
+  // START .product-card
+  +b.A.product-card(href="!#")
+    +e.DIV.view
+      img(src= `img/${img}` alt="Viagra Generic")
+    +e.DIV.header
+      +e.DIV.title Viagra Generic
+      +e.DIV.desc Sildenafil
+    +e.DIV.price $0.47
+    +e.DIV.buy
+      +btn-before-icon({text: "Buy now", icon: "buy", cls: "--full-width"})
+  // END .product-card

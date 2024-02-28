@@ -1,0 +1,206 @@
+include ../actions/actions
+include ../tabs/tabs
+
+mixin product-data(data)
+
+  -
+    const dataMerken = {
+      list: ["Sildenafil", "Cenforce", "Sildigra", "Fildena"],
+      last: "Filagra",
+    };
+
+    const dataProducent = {
+      list: ["Aurochem Pharmaceutical Pvt. Ltd.", "Centurion Laboratories", "Dharam Distributors", "Fortune Healthcare Pvt Ltd"],
+      last: "Fortune Healthcare Pvt Ltd.",
+    };
+
+    const dataTabs = {
+      cmp: "tbl-product",
+      cls: "d-lg-none",
+      ctrl: [
+        {
+          value: "200",
+          data: {
+            rows: [
+              {
+                package: "180 pillen",
+                bonuses: ["air", "gift"],
+                price: "129.47",
+                best: "0.27",
+              },
+              {
+                package: "120 pillen",
+                bonuses: ["gift"],
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "90 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "60 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "30 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+            ]
+          },
+        },
+        {
+          value: "150",
+          data: {
+            rows: [
+              {
+                package: "190 pillen",
+                bonuses: ["air", "gift"],
+                price: "129.47",
+                best: "0.27",
+              },
+              {
+                package: "120 pillen",
+                bonuses: ["gift"],
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "90 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "60 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "30 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+            ]
+          },
+        },
+        {
+          value: "100",
+          data: {
+            rows: [
+              {
+                package: "200 pillen",
+                bonuses: ["air", "gift"],
+                price: "129.47",
+                best: "0.27",
+              },
+              {
+                package: "120 pillen",
+                bonuses: ["gift"],
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "90 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "60 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "30 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+            ]
+          },
+        },
+        {
+          value: "50",
+          data: {
+            rows: [
+              {
+                package: "210 pillen",
+                bonuses: ["air", "gift"],
+                price: "129.47",
+                best: "0.27",
+              },
+              {
+                package: "120 pillen",
+                bonuses: ["gift"],
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "90 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "60 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+              {
+                package: "30 pillen",
+                price: "39.47",
+                best: "0.27",
+              },
+            ]
+          },
+        },
+      ]
+    };
+
+  // START .product-data
+  +b.DIV.product-data
+    +e.DIV.details
+      +e.DIV.view
+        +e.IMG.blister(src="../img/product-blister.jpg" alt="Blister")
+        +e.IMG.pill(src="../img/product-pill.png" alt="Pill")
+      +e.DIV.details-item
+        +e.H3.details-title Merk(en):
+        +e.P.details-list
+          each item in dataMerken.list
+            a(href="!#")= item
+            |
+            | /
+          a(href="!#")= dataMerken.last
+      +e.DIV.details-item
+        +e.H3.details-title Producent:
+        +e.P.details-list
+          each item in dataProducent.list
+            span= item
+            |
+            | /
+          span= dataProducent.last
+      +e.DIV.details-item
+        +e.H3.details-title Ziektes:
+        +e.P.details-list
+          span Erectile Dysfunction
+          |
+          | /
+          |
+          span Impotence
+    +e.DIV.body
+      +e.H1.title Generiek Viagra
+      +e.DIV.subtitle Sildenafil Citrate
+
+      +tabs(dataTabs)
+      
+      +actions({})
+
+      +e.DIV.desc
+        strong Generieke Viagra
+        |
+        | — is de eerste en de meest bekende remedie voor mannelijke erectie.
+        | De werkzame stof wordt Sildenafil genoemd. Het biedt verbeterde doorbloeding aan mannelijke genitale gebied.
+        | Wanneer de holle lichaam ontspannen is, wordt het gevuld met bloed, waarbij een erectie verschijnt.
+        | Dit is voldoende voor het uitvoeren van een daad van intimiteit. Sildenafil heeft geen effect op de hersenen.
+        | Een erectie zal tot stand komen bij een natuurlijke seksuele opwinding.
+  // END .product-data

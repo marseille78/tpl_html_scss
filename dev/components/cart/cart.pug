@@ -1,0 +1,34 @@
+include ../btn/btn
+
+mixin cart(data)
+  // START .cart
+  +b.DIV.cart
+    +e.A.mob-open.d-lg-none(href="/cart.html")
+      i.icon-buy
+      span My cart
+    +e.BUTTON.mob-open.d-none.d-lg-flex
+      i.icon-buy
+      span My cart
+    +e.DIV.body.d-none.d-lg-block
+      +e.UL.list
+        +e.LI.item
+          +e.DIV.item-view
+            img(src="../../img/pill-2.jpg" alt="")
+          +e.DIV.item-body
+            +e.DIV.item-title Viagra Generic
+            +e.DIV.item-desc 1 x 10 pills
+          +e.DIV.item-summary
+            +e.BUTTON.item-remove &times;
+            +e.DIV.item-price $33.51
+        +e.LI.item
+          +e.DIV.item-view
+            img(src="../../img/pill-2.jpg" alt="")
+          +e.DIV.item-body
+            +e.DIV.item-title Viagra Generic
+            +e.DIV.item-desc 1 x 10 pills
+          +e.DIV.item-summary
+            +e.BUTTON.item-remove &times;
+            +e.DIV.item-price $33.51
+      +e.DIV.bottom
+        +btn({text: "Checkout"})
+  // END .cart

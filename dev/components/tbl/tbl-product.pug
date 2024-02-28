@@ -1,0 +1,47 @@
+include ../qty/qty
+include ../btn/btn-two-icons
+include ../prod-bonuses/prod-bonuses
+
+mixin tbl-product(data)
+
+  -
+    const {rows} = data;
+
+  // START .tbl
+  +b.TABLE.tbl--product
+    +e.THEAD.thead.d-none.d-lg-tbl-head-group
+      +e.TH.th--package
+        +e.DIV.th-inner Pakket
+      +e.TH.th--price
+        +e.DIV.th-inner Prijs
+      +e.TH.th--best
+        +e.DIV.th-inner Besparingen
+      +e.TH.th--qty
+        +e.DIV.th-inner Quantity
+      +e.TH.th--add-to-cart
+        +e.DIV.th-inner
+
+    each itemRows in rows
+      +e.TBODY.tbody
+        +e.TR.tr
+          +e.TD.td--package
+            +e.DIV.td-inner= itemRows.package
+              if itemRows.bonuses
+                +prod-bonuses(itemRows.bonuses)
+          +e.TD.td--price
+            +e.DIV.td-inner
+              | $
+              +e.SPAN.price-field(data-product-price= itemRows.price) 0
+              +e.SPAN.per-pill.d-lg-none $1.2 per pill
+          +e.TD.td--best.d-none.d-lg-tbl-cell
+            +e.DIV.td-inner
+              | $
+              span(data-product-best= itemRows.best) 0
+          +e.TD.td--qty.d-none.d-lg-tbl-cell
+            +e.DIV.td-inner
+              +qty({})
+          +e.TD.td--add-to-cart
+            +e.DIV.td-inner
+              +btn-two-icons({text: "Add to cart", tag: "a", href: "!#", icon: "buy", icon2: "buy-fill", cls: "--text-hide --icon-invert"})
+
+  // END .tbl

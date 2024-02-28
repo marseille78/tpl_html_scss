@@ -1,0 +1,25 @@
+<!-- START .top-controller -->
+<div class="top-controller">
+  <div class="top-controller__item">
+    <form>
+      <select class="top-controller__select">
+        @@loop("./_option.html", "./dataCountries.json")
+      </select>
+    </form>
+  </div>
+  <div class="top-controller__item">
+    <form>
+      <select class="top-controller__select">
+        @@loop("./_option.html", "./dataLanguages.json")
+      </select>
+    </form>
+  </div>
+  <div class="top-controller__item">
+    <form>
+      <select class="top-controller__select">
+        @@loop("./_option.html", "./dataCurrency.json")
+      </select>
+    </form>
+  </div>
+</div>
+<!-- END .top-controller -->

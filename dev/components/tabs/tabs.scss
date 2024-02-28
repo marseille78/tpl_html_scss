@@ -1,0 +1,118 @@
+/* .tabs */
+// @media (min-width: $xs) { /* .tabs $xs */ }
+// @media (min-width: $sm) { /* .tabs $sm */ }
+// @media (min-width: $md) { /* .tabs $md */ }
+@media (min-width: $lg) { /* .tabs $lg */ }
+// @media (min-width: $xl) { /* .tabs $xl */ }
+// @media (min-width: $xxl) { /* .tabs $xxl */ }
+
+.tabs {
+  margin-bottom: 32px;
+  
+  @media (min-width: $lg) {
+    margin-bottom: 43px;
+  }
+  
+  &--prod-2 {
+    @media (min-width: $lg) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__ctrl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    max-width: 80px;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    max-width: calc(100% - 10px);
+    overflow-x: auto;
+  }
+  &__ctrl-item {
+    padding: 12px 20px;
+    background-color: #EDF3FF;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    font-family: $ff_second;
+    color: #1672C6;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom-color: #1672C6;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media (min-width: $lg) {
+      padding: 12px 19px;
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &.active {
+      background-color: #fff;
+      border: 1px solid #1672C6;
+      border-bottom-color: #EAECF0;
+    }
+  }
+  &__body {
+    border-radius: 0 8px 8px 8px;
+    border: 1px solid #1672C6;
+    // padding: 12px 0 11px;
+    padding: 0;
+    
+    @media (min-width: $lg) {
+      padding: 0 24px;
+    }
+  }
+  &__body-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+  &__footer {
+    padding-top: 20px;
+    
+    @media (min-width: $lg) {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__footer-result {
+    font-weight: 700;
+    font-family: $ff_second;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+  &__footer-total {
+    font-size: 42px;
+    line-height: 48px;
+    margin-right: 12px;
+  }
+  &__footer-discont {
+    color: #9DA6B3;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration-line: line-through;
+  }
+  &__footer-ctrl {
+    display: flex;
+    justify-content: space-between;
+  }
+}
